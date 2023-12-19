@@ -60,7 +60,7 @@ h1 {
   }
   .button-container {
     display: flex;
-    gap: 10px; 
+    gap: 10px; /* Espaciado entre los botones */
   }
   .delete-button {
     color: white;
