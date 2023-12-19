@@ -1,0 +1,31 @@
+<div>
+    <h1>Lista de Eventos</h1>
+    <ul>
+      <li *ngFor="let evento of events">
+        <div>
+          <strong>Título:</strong> {{ evento.title }}
+        </div>
+        <div>
+          <strong>Descripción:</strong> {{ evento.description }}
+        </div>
+        <div>
+          <strong>Fecha de Inicio:</strong> {{ evento.start_date }}
+        </div>
+        <div>
+          <strong>Fecha de Fin:</strong> {{ evento.end_date }}
+        </div>
+        <div>
+          <strong>Lugar:</strong> {{ evento.venue }}
+        </div>
+        <div class="button-container">
+          <a [routerLink]="['/editar-evento', evento.id]">
+            <button>Editar</button>
+          </a>
+          <button class="delete-button" (click)="confirmarBorrarEvento(evento.id)">Borrar</button>
+      </div>
+      </li>
+    </ul>
+    <a [routerLink]="['/agregar-eventos']">
+        <button>Agregar Evento</button>
+    </a>
+  </div>
